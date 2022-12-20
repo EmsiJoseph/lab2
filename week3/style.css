@@ -1,3 +1,6 @@
+/*this is a comment in css*/
+
+/*format the body*/
 body {
     font-family: Arial, sans-serif;
     background-image: url('https://github.com/EmsiJoseph/lab2/blob/main/week3/images/profile.png?raw=true');
@@ -14,27 +17,27 @@ body {
     border-radius: 10px;
   }
 
-  h1 {
+h1 {
     color: #333;
     font-size: 32px;
     text-align: center;
     margin-bottom: 20px;
   }
 
-  h2 {
+h2 {
     color:rgba(30, 30, 30, 0.966);
     font-size: 22px;
     text-align: left;
     margin-bottom: 20px;
   }
 
-  p {
+p {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 20px;
   }
 
-  img {
+img {
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -43,10 +46,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .glassmorphism {
-    backdrop-blur: 10px; /* Add a 10px blur effect */
+.glassmorphism {
+    backdrop-filter: blur(10px); /* Add a 10px blur effect */
     background-color: rgba(255, 255, 255, 0.9); /* Add a translucent white background color */
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-  }
+  } 
