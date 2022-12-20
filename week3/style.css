@@ -21,6 +21,13 @@ body {
     margin-bottom: 20px;
   }
 
+  h2 {
+    color:rgba(30, 30, 30, 0.966);
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
   p {
     font-size: 14px;
     line-height: 1.5;
