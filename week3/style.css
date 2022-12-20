@@ -7,8 +7,8 @@ body {
     background-size: 100%;
     backdrop-filter: blur(10px);
   }
-
-  .container {
+/*this is a container format*/
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
