@@ -6,6 +6,7 @@ body {
     background-image: url('https://github.com/EmsiJoseph/lab2/blob/main/week3/images/profile.png?raw=true');
     background-size: 100%;
     backdrop-filter: blur(10px);
+    background-attachment: fixed;
   }
 /*this is a container format*/
 .container {
