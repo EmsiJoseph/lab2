@@ -16,4 +16,34 @@ let major = "Mobile and Internet Technology";
 
 let hobbies = ["Playing COD:M", "Sleeping"];
 
+let hobbiesList = "";
+for(let i = 0; i < hobbies.length; i++){
+    hobbiesList += "<li>" + hobbies[i] + "</li>";
+};
+
 let gradDate = new Date("May 2024");
+
+document.getElementById("profilePicture").addEventListener("mouseover", function() { 
+  if (isFullScholar) { 
+    alert(`${fullName} is currently ${age} years old and is a full-scholar of SM Foundation`); 
+  } else {
+    alert(`${fullName} is currently ${age} years old`); 
+  }
+});
+
+document.getElementById("name").innerHTML = fullName;
+document.getElementById("age").innerHTML = age;
+document.getElementById("seniorHighSchool").innerHTML = seniorHighSchool;
+document.getElementById("course").innerHTML = course;
+document.getElementById("major").innerHTML = major;
+document.getElementById("yearLevel").innerHTML = yearLevel;
+document.getElementById("numberOfYearsInCollege").innerHTML = numberOfYearsInCollege;
+document.getElementById("yearsLeftInCollege").innerHTML = yearsLeftInCollege;
+document.getElementById("hobbies").innerHTML = "<ul>" + hobbiesList + "</ul>";
+document.getElementById("gradDate").innerHTML = gradDate;
+
+if (isFullScholar) {
+    document.getElementById("scholarship").innerHTML = "I am a full-scholar of SM Foundation";
+  } else {
+    document.getElementById("scholarship").innerHTML = "Not a full-scholar";
+  };
