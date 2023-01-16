@@ -14,3 +14,4 @@ let course = "Bachelor of Science in Information Technology";
 
 let major = "Mobile and Internet Technology";
 
+let hobbies = ["Playing COD:M", "Sleeping"];
