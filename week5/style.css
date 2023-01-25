@@ -13,7 +13,7 @@ body {
 #header{
   width: 100%;
   height: 100vh;
-  background-image: url(/week5/images/background.png);
+  background-image: url(https://github.com/EmsiJoseph/lab2/blob/main/week5/images/background.png);
   background-size: cover;
   background-position: center; 
 }
