@@ -142,3 +142,54 @@ p span{
 .tab-contents.active-tab{
   display: block;
 }
+
+/* portfolio */
+#portfolio{
+  padding: 30px 0;
+}
+
+.portfolio-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2rem;
+
+}
+
+.portfolio-box  {
+  width: 100%;
+  box-shadow: 0 0 3px rgba(60, 72, 88, .8);
+  align-items: center;
+  background: #262626;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 10px;
+}
+
+.image-container {
+  height: 25rem;
+}
+
+.image-container img {
+  object-fit: cover;
+  height: 25rem;
+}
+
+.portfolio-box .content {
+  padding: 2rem 1rem;
+}
+.portfolio-box .content h4 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.portfolio-box .content p {
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+.portfolio-box a{
+  align-items: center;
+}
+
