@@ -77,7 +77,7 @@
   <!-- portfolio -->
   <section id="portfolio">
     <div class="container">
-      <h1 class="sub-title">Portfolio</h1>
+      <h1 class="sub-title">My Portfolio</h1>
       <div class="portfolio-center container" data-aos="fade-up" data-aos-duration="1500">
         <div class="portfolio-box">
           <div class="image-container">
@@ -105,6 +105,7 @@
       for(tabcontent of tabcontents){
         tabcontent.classList.remove("active-tab");
       }
+      // this is an event
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
     } 
