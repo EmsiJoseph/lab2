@@ -164,6 +164,8 @@ p span{
   font-size: 13px;
   font-weight: 300;
   border-right: 10px;
+  transition: background 0.5s, transform 0.5s;
+  border-radius: 30px;
 }
 
 .image-container {
@@ -186,6 +188,7 @@ p span{
 
 .portfolio-box .content p {
   color: rgb(255, 255, 255);
+  font-size: 15px;
   margin-bottom: 1rem;
 }
 
@@ -193,3 +196,7 @@ p span{
   align-items: center;
 }
 
+.portfolio-box:hover{
+  background: #ff004f;
+  transform: translateY(-10px);
+}
