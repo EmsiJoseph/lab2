@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ---------links-------- -->
-  <link rel="stylesheet" href="style.css" \>
+  <link rel="stylesheet" href="index.css" \>
   <script src="https://kit.fontawesome.com/d12174c34c.js" crossorigin="anonymous"></script>
 
   <title>My Portfolio</title>
@@ -113,64 +113,8 @@
             </div>
         </div>
         <div class="contact-right">
-          <!-- --------Form Validation------------ -->
-          <?php
-// define variables and set to empty values
-            $nameErr = $emailErr = $genderErr = $websiteErr = "";
-            $name = $email = $gender = $comment = $website = "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-              if (empty($_POST["name"])) {
-                $nameErr = "Name is required";
-              } else {
-                $name = test_input($_POST["name"]);
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-                  $nameErr = "Only letters and white space allowed";
-                }
-              }
-              
-              if (empty($_POST["email"])) {
-                $emailErr = "Email is required";
-              } else {
-                $email = test_input($_POST["email"]);
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                  $emailErr = "Invalid email format";
-                }
-              }
-                
-              if (empty($_POST["website"])) {
-                $website = "";
-              } else {
-                $website = test_input($_POST["website"]);
-                // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-                if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-                  $websiteErr = "Invalid URL";
-                }
-              }
-
-              if (empty($_POST["comment"])) {
-                $comment = "";
-              } else {
-                $comment = test_input($_POST["comment"]);
-              }
-
-              if (empty($_POST["gender"])) {
-                $genderErr = "Gender is required";
-              } else {
-                $gender = test_input($_POST["gender"]);
-              }
-            }
-
-            function test_input($data) {
-              $data = trim($data);
-              $data = stripslashes($data);
-              $data = htmlspecialchars($data);
-              return $data;
-            }
-            ?>
-
+          <!-- --------Form------------ -->
+        
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
@@ -179,23 +123,16 @@
             <button type="submit" class="btn btn2">Submit</button>
             </form>
 
-            <?php
-            echo "<h2>Your Input:</h2>";
-            echo $name;
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo $website;
-            echo "<br>";
-            echo $comment;
-            echo "<br>";
-            echo $gender;
-            ?>
-      
+            <?php include 'form.php'; ?>
+            
         </div>
       </div>
     </div>
+    <div id="copyright">
+      <p>Copyright © Emsi. A sample website for WEBPROG</p>
+    </div>
   </div>
+  
 
 
 
@@ -219,7 +156,7 @@
 
 
 
-
+<!-- Tabs -->
   <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -237,7 +174,7 @@
       document.getElementById(tabname).classList.add("active-tab");
     } 
   </script>
-  
+              
 
 </body>
 </html>
