@@ -51,12 +51,13 @@
             </form>
 
             <?php include 'form.php'; ?>
+  
+        </div>
+      </div>
 
+  <!-- ---------- AJAX for reloading content -------- -->
 
-          
-            <!-- ---------- AJAX for reloading content -------- -->
-
-            <script>
+  <script>
               $(document).ready(function() {
               $("form").submit(function(e) {
               e.preventDefault();
@@ -73,18 +74,7 @@
              });
             });
           });
-</script>
-This code will make an AJAX POST request to the submit-comment.php script when the form is submitted, sending the comment as part of the request. The PHP script will process the form data, save the comment, and return the updated list of comments, which will then be displayed in the #comments section on the page. The page will not reload, and the user will be able to see the new comment without having to refresh the page.
-
-
-
-
-
-            
-        </div>
-      </div>
-
-
+          </script>
 
 
 
