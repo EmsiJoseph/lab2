@@ -130,7 +130,7 @@
         </div>
       </div>
       <div style="text-align: center">
-            <a href="guests_log.php">
+            <a href="comments.php">
               <button class="btn btn2">See my guests</button>
             </a>
         </div>

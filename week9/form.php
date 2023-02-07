@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $comment = test_input($_POST["comment"]);
               }
 
-              $servername = "http://apcwebprog.csf.ph/";
+              $servername = "localhost";
               $username = "webprogmi211";
               $password = "webprogmi211";
               $dbname = "webprogmi211";
