@@ -47,7 +47,7 @@
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="website" name="website" placeholder="Your Website">
             <textarea name="comment" rows="6" placeholder="Your Message"></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
+            <button type="submit" class="btn btn2" onlick="location.reload();">Submit</button>
             </form>
 
             <?php include 'form.php'; ?>
