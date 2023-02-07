@@ -14,7 +14,9 @@
   <div id="header">
     <div class="container">
       <nav>
-        <img src="images/icon.png" class="logo">
+        <a href="index.php">
+          <img src="images/icon.png" class="logo">
+        </a>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -128,8 +130,8 @@
         </div>
       </div>
       <div style="text-align: center">
-            <a href="displayRec.php">
-              <button class="btn btn2">See my guests</button>
+            <a href="guests_log.php">
+              <button class="btn2">See my guests</button>
             </a>
         </div>
     </div>
