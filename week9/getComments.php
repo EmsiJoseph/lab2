@@ -13,7 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, email, comment FROM myguests";
+$sql = "SELECT name, email, comment FROM mcagbanlog_myguests";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
