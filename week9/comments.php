@@ -34,7 +34,7 @@
       <div class="row">
         <div class="comment-left">
           <hi class="sub-title">Comments</hi>
-          <br>
+          <br><br>
           <?php include 'getComments.php'; ?>
         </div>
         <div class="contact-right">
