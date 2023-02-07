@@ -40,10 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $comment = test_input($_POST["comment"]);
               }
 
-              $servername = "localhost";
-              $username = "root";
-              $password = "";
-              $dbname = "mydb";
+              $servername = "http://apcwebprog.csf.ph/";
+              $username = "webprogmi211";
+              $password = "webprogmi211";
+              $dbname = "webprogmi211";
             
               // Create connection
               $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -52,8 +52,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
               }
-              
-              $sql = "INSERT INTO myguests (name, email, website, comment)
+
+              //sql queries
+
+              //create table
+
+              $sql = "CREATE TABLE mcagbanlog_myguests (
+                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(30) NOT NULL,
+                email VARCHAR(30) NOT NULL,
+                website VARCHAR(50),
+                comment VARCHAR(255),
+                reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                )";
+                
+              //insert data
+              $sql = "INSERT INTO mcagbanlog_myguests (name, email, website, comment)
               VALUES ('$name', '$email', '$website', '$comment')";
 
             if (mysqli_query($conn, $sql)) {
