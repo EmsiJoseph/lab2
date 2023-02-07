@@ -131,7 +131,7 @@
       </div>
       <div style="text-align: center">
             <a href="guests_log.php">
-              <button class="btn2">See my guests</button>
+              <button class="btn btn2">See my guests</button>
             </a>
         </div>
     </div>

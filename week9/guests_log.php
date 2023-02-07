@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ---------links-------- -->
+  <!-- -------- CSS ---------- -->
   <link rel="stylesheet" href="index.css" \>
+  
   <script src="https://kit.fontawesome.com/d12174c34c.js" crossorigin="anonymous"></script>
-  <title>My Portfolio</title>
+  <title>Comment Section</title>
 </head>
 <body>
-<div id="header">
-    <div class="container">
+<div id="header" style="background: #00000">
+    <h1 class="container">
       <nav>
         <a href="index.php">
           <img src="images/icon.png" class="logo">
@@ -24,10 +26,21 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>  
-      <div class="header-text">
-        <p>APC Student</p>
-        <h1>Hi, my name is <br> <span>Mc Joseph Agbanlog</span><br>From <span>BSIT MI211</span></h1>
-      </div>
+</div>
+
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+ <input type="text" name="name" placeholder="Your Name" required>
+ <input type="email" name="email" placeholder="Your Email" required>
+ <input type="website" name="website" placeholder="Your Website">
+ <textarea name="comment" rows="6" placeholder="Your Message"></textarea>
+ <button type="submit" class="btn btn2">Submit</button>
+ </form>
+
+<?php include 'form.php'; ?>
+
+
+
 
 
 
