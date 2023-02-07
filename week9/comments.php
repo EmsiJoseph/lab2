@@ -61,7 +61,7 @@
 
 
 <script>
-  document.getElementByTagName("form").addEventListener("click", function() {
+  document.getElementByTagName("button").addEventListener("click", function() {
   location.reload();
   });
 </script>
