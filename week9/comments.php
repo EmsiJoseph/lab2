@@ -51,7 +51,6 @@
                         <textarea name="comment" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
-                    <?php include 'getComments.php'; ?>
                     <?php include 'form.php'; ?>
 
                 </div>
