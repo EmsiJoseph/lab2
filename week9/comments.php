@@ -49,7 +49,7 @@
                         <input type="email" name="email" placeholder="Your Email" required>
                         <input type="website" name="website" placeholder="Your Website">
                         <textarea name="comment" rows="6" placeholder="Your Message"></textarea>
-                        <button id="submit" type="submit" class="btn btn2">Submit</button>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <?php include 'form.php'; ?>
 
@@ -61,7 +61,7 @@
 
 
 <script>
-  document.getElementById("submit").addEventListener("click", function() {
+  document.getElementByTagName("form").addEventListener("click", function() {
   location.reload();
   });
 </script>
