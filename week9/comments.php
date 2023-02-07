@@ -53,26 +53,33 @@
             <?php include 'form.php'; ?>
 
 
-
-
-          <!-- ------ Script for reload every form submission -------- -->
           
-          <script>
-           $("#comment-form").submit(function(e) {
-            e.preventDefault();
+            <!-- ---------- AJAX for reloading content -------- -->
 
-          // submit the form using AJAX
-           $.ajax({
-           type: "POST",
-           url: "/submit-comment",
-           data: $(this).serialize(),
-           success: function(data) {
-        // on success, update the comments section with the new data
-           $("#comment").html(data);
-      }
-    });
-  });
+            <script>
+              $(document).ready(function() {
+              $("form").submit(function(e) {
+              e.preventDefault();
+
+              // submit the form using AJAX
+              $.ajax({
+                type: "POST",
+                url: "/getComments.php",
+                data: $(this).serialize(),
+                success: function(data) {
+               // on success, update the comments section with the new data
+                $("#comments").html(data);
+                }
+             });
+            });
+          });
 </script>
+This code will make an AJAX POST request to the submit-comment.php script when the form is submitted, sending the comment as part of the request. The PHP script will process the form data, save the comment, and return the updated list of comments, which will then be displayed in the #comments section on the page. The page will not reload, and the user will be able to see the new comment without having to refresh the page.
+
+
+
+
+
             
         </div>
       </div>
