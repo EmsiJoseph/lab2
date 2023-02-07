@@ -54,18 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               }
 
               //sql queries
-
-              //create table
-
-              $sql = "CREATE TABLE mcagbanlog_myguests (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(30) NOT NULL,
-                email VARCHAR(30) NOT NULL,
-                website VARCHAR(50),
-                comment VARCHAR(255),
-                reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-                )";
-                
+                         
               //insert data
               $sql = "INSERT INTO mcagbanlog_myguests (name, email, website, comment)
               VALUES ('$name', '$email', '$website', '$comment')";
@@ -76,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
                 
-  
               
               mysqli_close($conn);
             }
