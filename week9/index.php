@@ -8,7 +8,6 @@
   <!-- ---------links-------- -->
   <link rel="stylesheet" href="index.css" \>
   <script src="https://kit.fontawesome.com/d12174c34c.js" crossorigin="anonymous"></script>
-
   <title>My Portfolio</title>
 </head>
 <body>
@@ -124,9 +123,15 @@
             </form>
 
             <?php include 'form.php'; ?>
+          
             
         </div>
       </div>
+      <div style="text-align: center">
+            <a href="displayRec.php">
+              <button class="btn btn2">See my guests</button>
+            </a>
+        </div>
     </div>
     <div id="copyright">
       <p>Copyright © Emsi. A sample website for WEBPROG</p>
@@ -157,12 +162,11 @@
 
 
 <!-- Tabs -->
-  <script>
-
+ <script>   
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
+function opentab(tabname){
       for(tablink of tablinks){
         tablink.classList.remove("active-link");
       }
@@ -172,8 +176,7 @@
       // this is an event
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
-    } 
-  </script>
+} </script>
               
 
 </body>

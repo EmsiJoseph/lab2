@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               VALUES ('$name', '$email', '$website', '$comment')";
 
             if (mysqli_query($conn, $sql)) {
-                echo "<script>alert('Form submitted, salamat so much');</script>";
+                echo "Message sent successfully, thank you so much!";
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
