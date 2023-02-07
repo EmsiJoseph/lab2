@@ -42,16 +42,37 @@
         <div class="contact-right">
           <!-- --------Form------------ -->
         
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+            <form id="comment-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="website" name="website" placeholder="Your Website">
             <textarea name="comment" rows="6" placeholder="Your Message"></textarea>
-            <button type="submit" class="btn btn2" onlick="location.reload();">Submit</button>
+            <button type="submit" class="btn btn2">Submit</button>
             </form>
 
             <?php include 'form.php'; ?>
+
+
+
+
+          <!-- ------ Script for reload every form submission -------- -->
           
+          <script>
+           $("#comment-form").submit(function(e) {
+            e.preventDefault();
+
+          // submit the form using AJAX
+           $.ajax({
+           type: "POST",
+           url: "/submit-comment",
+           data: $(this).serialize(),
+           success: function(data) {
+        // on success, update the comments section with the new data
+           $("#comment").html(data);
+      }
+    });
+  });
+</script>
             
         </div>
       </div>
