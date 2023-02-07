@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ---------links-------- -->
   <!-- -------- CSS ---------- -->
-  <link rel="stylesheet" href="guests_log.css" \>
+  <link rel="stylesheet" href="comments.css" \>
+  <link rel="stylesheet" href="index.css" \>
   
   <script src="https://kit.fontawesome.com/d12174c34c.js" crossorigin="anonymous"></script>
   <title>Comments</title>
